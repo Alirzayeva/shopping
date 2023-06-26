@@ -1,0 +1,139 @@
+.header {
+  width: 100%;
+  background-color: rgb(12, 16, 28);
+  height: 60px;
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .container {
+    display: flex;
+    .logo {
+      width: 20%;
+      margin: 15px;
+      a {
+        color: #747373;
+        font-size: 22px;
+        font-weight: 550;
+        cursor: pointer;
+        &:hover {
+          color: rgb(218, 26, 26);
+        }
+      }
+    }
+    .navBar {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      .navList {
+        display: flex;
+        margin: 20px;
+        text-align: center;
+        gap: 65px;
+        a {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          &:hover {
+            color: olive;
+            font-size: 22px;
+          }
+          &.active {
+            color: red;
+          }
+        }
+      }
+    }
+    .cardHed {
+      width: 20%;
+      margin: 20px 20px;
+      color: #fff;
+      font-size: 18px;
+      position: relative;
+      z-index: 99;
+
+      .cartIcon {
+        cursor: pointer;
+        &:hover {
+          color: olive;
+        }
+      }
+      .hdn {
+        width: 100%;
+        visibility: hidden;
+        .cartList {
+          width: 100%;
+          height: 30px;
+          color: #000;
+          background-color: #ffffff;
+          margin: 18px 0 0 -70px;
+          box-shadow: #6a6a6a 1px 1.5px 3px;
+
+          .cartItem {
+            width: 300px;
+            color: #000;
+            display: flex;
+            .itemImg {
+              width: 160px;
+              height: 150px;
+              background-color: #fff;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: inherit;
+              }
+            }
+            .itemInfo {
+              width: 270px;
+              height: 150px;
+              background-color: #fff;
+              h3,
+              p {
+                font-size: 15px;
+                font-weight: 500;
+                padding: 5px;
+              }
+              span {
+                font-size: 18px;
+                padding: 5px;
+              }
+            }
+            .deleteIcon {
+              width: 15px;
+              position: absolute;
+              z-index: 99;
+              right: 15px;
+              &:hover {
+                color: rgb(192, 13, 13);
+              }
+            }
+          }
+          .viewCart {
+            width: 300px;
+            background-color: #fff;
+            color: #000;
+            float: left;
+            margin: -5px 0;
+            padding: 5px 80px;
+            &:hover {
+              color: red;
+              background-color: #6a6a6a;
+            }
+          }
+        }
+        &.active {
+          visibility: visible;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}

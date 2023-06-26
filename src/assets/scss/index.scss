@@ -1,0 +1,14 @@
+//BASE
+@import "./base";
+
+//COMPONENTS
+@import "./components/header";
+@import "./components/footer";
+@import "./components/card.scss";
+
+//PAGES
+@import "./pages/home";
+@import "./pages/shop";
+@import "./pages/cart";
+@import "./pages//single_product.scss";
+@import "./pages//not_found";
